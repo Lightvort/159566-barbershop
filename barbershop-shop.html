@@ -8,10 +8,10 @@
     <header class="main-header">
       <div class="container">
         <nav class="main-navigation">
-          <ul>
-            <li>
-              <a href="index.html"><img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop"></a>
-            </li>
+          <a href="index.html">
+            <img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop">
+          </a>
+          <ul>           
             <li>
               <a href="#">Информация</a>
             </li>
@@ -36,8 +36,8 @@
     </header>
     <main class="container">
       <section class="shop-header">
-        <h2 class="shop-header-title">Средства для ухода</h2>
-        <nav class="shop-breadcrumbs">
+        <h1>Средства для ухода</h1>
+        <div class="breadcrumbs">
           <ul>
             <li>
               <a href="index.html">Главная</a>
@@ -48,10 +48,10 @@
             </li>
             <li>Средства для ухода</li>
           </ul>
-        </nav>        
+        </div>        
       </section>
       <section class="producers-form">
-        <h3 class="producers-form-title">Производители:</h3>
+        <h2>Производители:</h2>
         <form action="#" method="get">
           <label>
             <input type="checkbox" checked>Baxter of California
@@ -72,95 +72,95 @@
             <input type="checkbox" checked>American Crew
           </label>
         </form>
-        <h3 class="producers-form-title">Группы товаров:</h3>
+        <h2>Группы товаров:</h2>
         <a class="btn btn-show" href="#">Показать</a>
       </section>
       <section class="items-list">
-        <article class="item travel-set">
+        <article class="item">
           <a href="barbershop-item.html">
             <img src="img/travel-set.jpg" width="220" height="165" title="Подробнее о наборе" alt="Набор Baxter of California">
           </a>
           <a href="barbershop-item.html">
             <b>Набор для путешествий<br>
-            "Baxter of California"</b>
+              <span>"Baxter of California"</span></b>
           </a>
           <div class="item-price">
             <b>2 900 руб.</b>
           </div>
           <a class="btn btn-buy" href="#">Купить</a>
         </article>
-        <article class="item conditioner">
+        <article class="item">
           <a href="#">
             <img src="img/conditioner.jpg" width="220" height="165" title="Подробнее о кондиционере" alt="Кондиционер Baxter of California">
           </a>
           <a href="#">
             <b>Увлажняющий кондиционер<br>
-            "Baxter of California"</b>
+              <span>"Baxter of California"</span></b>
           </a>
           <div class="item-price">
             <b>750 руб.</b>
           </div>
           <a class="btn btn-buy" href="#">Купить</a>
         </article>
-        <article class="item gel-suavecito">
+        <article class="item">
           <a href="#">
             <img src="img/gel-suavecito.jpg" width="220" height="165" title="Подробнее о геле" alt="Гель Suavecito">
           </a>
           <a href="#">
             <b>Гель для волос<br>
-            "Suavecito"</b>
+              <span>"Suavecito"</span></b>
           </a>
           <div class="item-price">
             <b>290 руб.</b>
           </div>
           <a class="btn btn-buy" href="#">Купить</a>
         </article>
-        <article class="item clay">
+        <article class="item">
           <a href="#">
             <img src="img/clay.jpg" width="220" height="165" title="Подробнее о глине" alt="Глина American crew">
           </a>
           <a href="#">
             <b>Глина для укладки волос<br>
-            "American crew"</b>
+              <span>"American crew"</span></b>
           </a>
           <div class="item-price">
             <b>500 руб.</b>
           </div>
           <a class="btn btn-buy" href="#">Купить</a>
         </article>
-        <article class="item gel-american">
+        <article class="item">
           <a href="#">
             <img src="img/gel-american.jpg" width="220" height="165" title="Подробнее о геле" alt="Гель American crew">
           </a>
           <a href="#">
             <b>Гель для волос<br>
-            "American crew"</b>
+              <span>"American crew"</span></b>
           </a>
           <div class="item-price">
             <b>300 руб.</b>
           </div>
           <a class="btn btn-buy" href="#">Купить</a>
         </article>
-        <article class="item shaving-kit">
+        <article class="item">
           <a href="#">
             <img src="img/shaving-kit.jpg" width="220" height="165" title="Подробнее о наборе" alt="Набор Baxter of California">
           </a>
           <a href="#">
             <b>Набор для бритья<br>
-            "BAXTER OF CALIFORNIA"</b>
+            <span>"Baxter of California"</span></b>
           </a>
           <div class="item-price">
             <b>3 900 руб.</b>
           </div>
           <a class="btn btn-buy" href="#">Купить</a>
         </article>
-        <nav class="bottom-nav">
+        <div class="paginator">
           <ul>
             <li>
               <a class="btn btn-page" href="#">1</a>
             </li>
             <li>
-              <a class="btn btn-page" href="#">2</a> <!-- uniqe style will be applied with "nth-child" -->
+              <a class="btn btn-page-active" href="#">2</a> <!-- uniqe style will be applied with "nth-child" -->
             </li>
             <li>
               <a class="btn btn-page" href="#">3</a>
@@ -169,7 +169,7 @@
               <a class="btn btn-page" href="#">4</a>
             </li>
           </ul>
-        </nav>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
