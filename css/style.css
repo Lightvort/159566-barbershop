@@ -1,0 +1,31 @@
+body {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: bold;
+  font-family: "PTSans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;  
+}
+
+h1, .index-content-title {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;  
+}
+
+.price-title {
+  font-size: 48px;
+}
+
+.features-name {
+  font-size: 30px;
+  color: #f7f4f1; 
+}
+
+.main-navigation a, .main-navigation-active, .login {
+  font-size: 16px;
+  color: #ffffff;
+}
+
