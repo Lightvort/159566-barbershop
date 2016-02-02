@@ -1,11 +1,19 @@
+html,
 body {
+  min-width: 1122px;
+  margin: 0;
+  padding: 0;
   font-size: 14px;
-  line-height: 24px;
-  color: #000000;
+  line-height: 24px;  
   font-weight: bold;
   font-family: "PTSans Narrow", "Arial", sans-serif;
+  color: #000000;
   text-transform: uppercase;  
+  background-color: #282828
 }
+
+
+ /* Общие стили шрифтов */
 
 h1, .index-content-title {
   font-size: 30px;
@@ -29,3 +37,238 @@ h2 {
   color: #ffffff;
 }
 
+
+/* Общие стили сетки */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.index-content,
+.item-container,
+.price-container
+{
+  background: #ffffff url(../img/content-whitenoise-background-101px.jpg)
+}
+
+
+/* Стили хэдера */
+
+.main-header {  
+  background-color: #000000;
+}
+
+.main-navigation {
+  float: left;
+  width: 780px;
+  min-height: 70px;
+}
+
+.user-block {
+  float: right;
+  width: 140px;
+  min-height: 70px;
+}
+
+.index-logo {
+  width: 368px;
+  min-height: 204px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+
+/* Стили мейна */
+
+main {
+  background-color: #070707;  
+}
+
+.features {
+  margin-bottom: 80px;
+}
+
+.features-item {
+  float: left;
+  width: 300px;
+  min-height: 175px;
+  margin-right: 20px;
+  color: #ffffff;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.index-content {
+  margin-bottom: 65px;;
+  padding: 50px 80px;
+}
+
+.index-content-left {
+  float: left;
+  width: 380px;
+  min-height: 330px;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+  min-height: 330px;
+}
+
+
+/* Стил футера */
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: #ffffff;
+  background-image: url(../img/footer-graynoise-background-100px.jpg)
+}
+
+.footer-contacts {
+  float: left;
+  width: 320px;
+  margin-right: 60px;
+  min-height: 90px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+  min-height: 90px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 180px;
+  min-height: 90px;
+}
+
+
+/* Дополнительные стили barbershop-item */
+
+.item-container { 
+  width: 950px;
+  margin: 0 auto;  
+  padding: 55px 130px 48px 120px;
+}
+
+.breadcrumbs {
+  margin-bottom: 60px;
+}
+
+.item-img {
+  display: block;
+  float: left;
+  width: 460px;
+  min-height: 670px;
+  margin: 0 90px 0 0;  
+  text-align: center;
+  border: 0;
+}
+
+.buy-menu {  
+  float: right; /* Задать отступы внутри блока после подключения шрифтов */
+  width: 390px;
+}
+
+
+/* Дополнительные стили barbershop-shop */
+
+.shop-container { 
+  width: 960px;
+  margin: 0 auto;  
+  padding: 55px 120px 50px;
+  background: #ffffff url(../img/content-whitenoise-background-101px.jpg);
+}
+
+.producers-form {
+  float: left;
+  width: 220px;
+  min-height: 590px;
+  margin-right: 10px;
+}
+
+.items-list {
+  float: right;
+  width: 720px;
+  font-size: 0px;
+}
+
+.items-list .item {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  min-height: 286px;
+  margin: 10px;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+.paginator {
+  float: left;
+  height: 43px;
+  margin-top: 45px;
+  margin-left: 10px;  
+}
+
+.paginator li {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin-right: 7px;
+  font-size: 14px;
+  background-color: #000000;
+}
+
+.paginator li:first-of-type {
+  margin-left: -43px;
+}
+
+
+/* Дополнительные стили barbershop-price */
+
+.price-container { 
+  width: 960px;
+  margin: 0 auto;  
+  padding: 55px 120px 68px;  
+}
+
+.price-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.price-features {
+  width: 460px;
+  padding: 10px;
+}
+
+.price-features:nth-of-type(even) {
+  float: left;
+}
+
+.price-features:nth-of-type(odd) {
+  float: right;
+}
+
+.price-features:nth-of-type(-n+3) {
+  min-height: 215px;
+  margin-bottom: 55px;
+}
+
+.price-features:last-of-type {
+  padding-top: 59px; /* Уточнить отступ после подключения шрифтов */
+}

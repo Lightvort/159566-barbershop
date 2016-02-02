@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <nav class="main-navigation">
           <a href="index.html">
             <img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop">
@@ -35,7 +35,7 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="shop-container clearfix">
       <section class="shop-header">
         <h1>Средства для ухода</h1>
         <div class="breadcrumbs">
@@ -55,25 +55,36 @@
         <h2>Производители:</h2>
         <form action="#" method="get">
           <label>
-            <input type="checkbox" checked>Baxter of California
+            <input type="checkbox" name="producers" checked>Baxter of California
           </label>
           <label>
-            <input type="checkbox">Mr Natty
+            <input type="checkbox" name="producers">Mr Natty
           </label>
           <label>
-            <input type="checkbox" checked>Suavecito
+            <input type="checkbox" name="producers" checked>Suavecito
           </label>
           <label>
-            <input type="checkbox">Malin+Goetz
+            <input type="checkbox" name="producers">Malin+Goetz
           </label>
           <label>
-            <input type="checkbox">Murray`s
+            <input type="checkbox" name="producers">Murray`s
           </label>
           <label>
-            <input type="checkbox" checked>American Crew
+            <input type="checkbox" name="producers" checked>American Crew
           </label>
         </form>
         <h2>Группы товаров:</h2>
+        <form action="#" method="get">
+          <label>
+            <input type="radio" name="good-groups">Бритвенные принадлежности
+          </label>
+          <label>
+            <input type="radio" name="good-groups" checked>Средства для ухода
+          </label>
+          <label>
+            <input type="radio" name="good-groups">Аксессуары
+          </label>
+        </form>
         <a class="btn btn-show" href="#">Показать</a>
       </section>
       <section class="items-list">
@@ -174,7 +185,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
