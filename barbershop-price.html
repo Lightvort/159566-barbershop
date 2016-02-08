@@ -3,16 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп - средства для ухода</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
+      <div class="header-price-page">
       <div class="container clearfix">
-        <nav class="main-navigation">
-          <a href="index.html">
-            <img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop">
-          </a>
+        <nav class="main-navigation">          
           <ul>
+            <li>
+              <a class="to-main-page" href="index.html">
+                <img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop">
+              </a>
+            </li>  
             <li>
               <a href="#">Информация</a>
             </li>
@@ -33,6 +38,7 @@
         <div class="user-block">
           <a class="login" href="#">Вход</a>
         </div>
+      </div>
       </div>
     </header>
     <main class="price-container clearfix">
@@ -91,7 +97,8 @@
         <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для Вас атмосферу, чувствовать себя комфортно и свободно!</p>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer price-footer">
+      <div class="shadow-footer"></div>
       <div class="container clearfix">
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br>

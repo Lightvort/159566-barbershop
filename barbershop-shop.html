@@ -3,16 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп - средства для ухода</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
+      <div class="header-shop-page">
       <div class="container clearfix">
-        <nav class="main-navigation">
-          <a href="index.html">
-            <img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop">
-          </a>
-          <ul>           
+        <nav class="main-navigation">          
+          <ul>
+            <li>
+              <a class="to-main-page" href="index.html">
+                <img src="img/secondary-logo.png" width="111" height="24" title="Go to Home page" alt="Barbershop">
+              </a>
+            </li>
             <li>
               <a href="#">Информация</a>
             </li>
@@ -34,6 +39,7 @@
           <a class="login" href="#">Вход</a>
         </div>
       </div>
+      </div>
     </header>
     <main class="shop-container clearfix">
       <section class="shop-header">
@@ -53,39 +59,30 @@
       </section>
       <section class="producers-form">
         <h2>Производители:</h2>
-        <form action="#" method="get">
-          <label>
-            <input type="checkbox" name="producers" checked>Baxter of California
-          </label>
-          <label>
-            <input type="checkbox" name="producers">Mr Natty
-          </label>
-          <label>
-            <input type="checkbox" name="producers" checked>Suavecito
-          </label>
-          <label>
-            <input type="checkbox" name="producers">Malin+Goetz
-          </label>
-          <label>
-            <input type="checkbox" name="producers">Murray`s
-          </label>
-          <label>
-            <input type="checkbox" name="producers" checked>American Crew
-          </label>
+        <form action="#" method="get">          
+          <input type="checkbox" name="producers" id="ch1" checked>
+            <label for="ch1">Baxter of California</label>         
+          <input type="checkbox" name="producers" id="ch2">
+            <label for="ch2">Mr Natty</label>          
+          <input type="checkbox" name="producers" id="ch3" checked>
+            <label for="ch3">Suavecito</label>          
+          <input type="checkbox" name="producers" id="ch4">
+            <label for="ch4">Malin+Goetz</label>
+          <input type="checkbox" name="producers" id="ch5">
+            <label for="ch5">Murray`s</label>          
+          <input type="checkbox" name="producers" id="ch6" checked>
+            <label for="ch6">American Crew</label>      
         </form>
         <h2>Группы товаров:</h2>
-        <form action="#" method="get">
-          <label>
-            <input type="radio" name="good-groups">Бритвенные принадлежности
-          </label>
-          <label>
-            <input type="radio" name="good-groups" checked>Средства для ухода
-          </label>
-          <label>
-            <input type="radio" name="good-groups">Аксессуары
-          </label>
-        </form>
-        <a class="btn btn-show" href="#">Показать</a>
+        <form action="#" method="get">          
+          <input type="radio" name="good-groups" id="rad1">
+            <label for="rad1">Бритвенные принадлежности</label>          
+          <input type="radio" name="good-groups" id="rad2" checked>
+            <label for="rad2">Средства для ухода</label>         
+          <input type="radio" name="good-groups" id="rad3">
+            <label for="rad3">Аксессуары</label>
+          <input class="btn btn-show" type="submit" value="Показать">
+        </form>        
       </section>
       <section class="items-list">
         <article class="item">
@@ -98,8 +95,8 @@
           </a>
           <div class="item-price">
             2 900 руб.
-          </div>
-          <a class="btn btn-buy" href="#">Купить</a>
+          </div><!--
+          --><a class="btn btn-buy" href="#">Купить</a>
         </article>
         <article class="item">
           <a href="#">
@@ -111,8 +108,8 @@
           </a>
           <div class="item-price">
             750 руб.
-          </div>
-          <a class="btn btn-buy" href="#">Купить</a>
+          </div><!--
+          --><a class="btn btn-buy" href="#">Купить</a>
         </article>
         <article class="item">
           <a href="#">
@@ -124,8 +121,8 @@
           </a>
           <div class="item-price">
             290 руб.
-          </div>
-          <a class="btn btn-buy" href="#">Купить</a>
+          </div><!--
+          --><a class="btn btn-buy" href="#">Купить</a>
         </article>
         <article class="item">
           <a href="#">
@@ -137,8 +134,8 @@
           </a>
           <div class="item-price">
             500 руб.
-          </div>
-          <a class="btn btn-buy" href="#">Купить</a>
+          </div><!--
+          --><a class="btn btn-buy" href="#">Купить</a>
         </article>
         <article class="item">
           <a href="#">
@@ -150,8 +147,8 @@
           </a>
           <div class="item-price">
             300 руб.
-          </div>
-          <a class="btn btn-buy" href="#">Купить</a>
+          </div><!--
+          --><a class="btn btn-buy" href="#">Купить</a>
         </article>
         <article class="item">
           <a href="#">
@@ -163,8 +160,8 @@
           </a>
           <div class="item-price">
             3 900 руб.
-          </div>
-          <a class="btn btn-buy" href="#">Купить</a>
+          </div><!--
+          --><a class="btn btn-buy" href="#">Купить</a>
         </article>
         <div class="paginator">
           <ul>
@@ -172,7 +169,7 @@
               <a class="btn btn-page" href="#">1</a>
             </li>
             <li>
-              <a class="btn btn-page-active" href="#">2</a> <!-- uniqe style will be applied with "nth-child" -->
+              <a class="btn btn-page-active" href="#">2</a>
             </li>
             <li>
               <a class="btn btn-page" href="#">3</a>
@@ -184,7 +181,8 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer shop-footer">
+      <div class="shadow-footer"></div>
       <div class="container clearfix">
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br>
