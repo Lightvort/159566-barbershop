@@ -8,7 +8,7 @@ body {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  background: #000000 url("../img/main-background-cut.jpg") no-repeat center top;  
+  background: #000000 url("../img/main-background-cut.jpg") no-repeat center top;
 }
 
 
@@ -68,6 +68,7 @@ h2 {
 .breadcrumbs li {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   margin-right: 40px;
 }
 
@@ -126,7 +127,7 @@ h2 {
   text-decoration: none;
 }
 
-.main-navigation a:hover {
+.main-navigation a:not(.to-main-page):hover {
   background: #242424;
 }
 
@@ -185,6 +186,7 @@ h2 {
 {
   width: 1200px;
   margin: 0 auto;
+  background-color: #000000;
 }
 
 .header-item-page .container,
@@ -192,7 +194,7 @@ h2 {
 .header-price-page .container
 {
   width: 975px;
-  margin-left: 117px
+  margin-left: 117px;
 }
 
 .to-main-page {
@@ -213,7 +215,8 @@ h2 {
   content: '';
   position: absolute;
   display: block;
-  width: 57px;
+  left: 20px;
+  right: 20px;
   height: 4px;
   bottom: 0;
   background-color: #ffffff;
@@ -419,8 +422,8 @@ h2 {
 .main-footer {
   padding-top: 60px;
   padding-bottom: 40px;
-  color: #ffffff; /* лучше явно прописать везде для футера */
-  background: #252525 url("../img/footer-graynoise-background-100px.jpg");  
+  color: #ffffff;
+  background: url("../img/footer-graynoise-background-100px.jpg") #252525;
 }
 
 .footer-contacts {
@@ -439,7 +442,7 @@ h2 {
 
 .footer-social {
   float: left;
-  width: 180px;
+  min-width: 180px;
   text-align: center;
 }
 
@@ -511,6 +514,8 @@ h2 {
 .shop-footer,
 .price-footer
 {
+  min-width: 1200px;
+  margin: 0 auto;
   padding-top: 0;
 }
 
@@ -555,7 +560,14 @@ figure {
 }
 
 .item-img-large {
+  height: 500px;
+  width: 460px;
   margin-bottom: 13px;
+}
+
+.item-img-small {
+  height: 148px;
+  width: 140px;
 }
 
 .item-img-link:not(:last-child) {
@@ -766,6 +778,11 @@ input[type="radio"]:checked:disabled + label::before {
   box-shadow: 0 0 20px -5px #000000;
 }
 
+.item img {
+  width: 220px;
+  height: 165px;
+}
+
 .item a:nth-child(2) {
   display: block;
   margin-bottom: 14px;
@@ -798,6 +815,7 @@ input[type="radio"]:checked:disabled + label::before {
 
 .paginator li {
   display: inline-block;
+  vertical-align: top;
   width: 43px;
   margin-right: 7px;
   padding-right: 0;
@@ -818,16 +836,13 @@ input[type="radio"]:checked:disabled + label::before {
   background-color: #ffffff;
 }
 
-/* Дополнительные стили barbershop-price */
 
-.header-price-page .main-navigation-active::after {
-  width: 77px;
-}
+/* Дополнительные стили barbershop-price */
 
 .price-container {
   width: 960px;
   margin: 0 auto;
-  padding: 35px 120px 55px;
+  padding: 35px 120px 20px;
   color: #000000;
 }
 
@@ -840,22 +855,31 @@ input[type="radio"]:checked:disabled + label::before {
 }
 
 .price-title {
-  position: relative;
-  margin-top: -20px;
+  margin-right: 10px;
   margin-left: 10px;
-  margin-bottom: 28px;
-  line-height: 62px;
+  margin-top: -17px;
+  margin-bottom: 65px;
   text-align: center;
 }
 
-.price-title::before,
-.price-title::after
+.price-title h2 {
+  position: relative;
+  z-index: 2;
+  display: inline;
+  margin: 0;
+  padding: 0 27px;
+  font-size: 48px;
+  line-height: 48px;
+  background: url(../img/content-whitenoise-background-101px.jpg) repeat #f8f3f0;
+}
+
+.price-title::before
 {
   content: '';
-  position: absolute;
-  top: 31px;
+  position: relative;
+  z-index: 1;
+  top: 25px;
   display: block;
-  width: 160px;
   height: 2px;
   background-color: #000000;
 }
@@ -864,24 +888,55 @@ input[type="radio"]:checked:disabled + label::before {
   right: 0;
 }
 
-.price-features {
+.inner-columns {
+  margin: 60px 10px;
+}
+
+.price-features-left,
+.price-features-right {
   width: 460px;
-  padding: 10px;
 }
 
-.price-features h2 {
-  line-height: 28px;
-  margin-bottom: 28px
+.price-features-left h2,
+.price-features-right h2
+{
+  margin-bottom: 30px
 }
 
-.price-features li {
+
+.price-features-left p,
+.price-features-right p
+{
+  width: 390px;
+  padding-top: 10px;
+}
+
+.price-features-left {
+  float: left;
+}
+
+.price-features-right {
+  float: right;
+}
+
+.price-features-left *:first-child,
+.price-features-right *:first-child {
+  margin-top: 0;
+}
+
+.price-features-left *:last-child,
+.price-features-right *:last-child {
+  margin-bottom: 0;
+}
+
+.inner-columns li {
   position: relative;
   margin-bottom: 14px;
   padding-left: 22px;
   list-style: none;
 }
 
-.price-features li::before {
+.inner-columns li::before {
   content: '';
   position: absolute;
   top: 8px;
@@ -893,11 +948,11 @@ input[type="radio"]:checked:disabled + label::before {
   transform: rotate(45deg);
 }
 
-.price-features li:last-child {
+.inner-columns li:last-child {
   margin-bottom: 0;
 }
 
-.price-features .service-prices-table {
+.inner-columns .service-prices-table {
   margin-top: 35px;
 }
 
@@ -916,22 +971,183 @@ input[type="radio"]:checked:disabled + label::before {
   text-align: center;
 }
 
-.price-features p {
-  max-width: 390px;
-}
- 
-.price-features:nth-of-type(even) {
-  float: left;
+
+/* Всплывающая форма */
+
+.modal-content {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  display: none;
+  width: 300px;
+  margin-left: -230px;
+  padding: 50px 80px;
+  color: #000000;
+  background: url("../img/content-whitenoise-background-101px.jpg") repeat #f8f3f0;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
-.price-features:nth-of-type(odd) {
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  display: block;
+  width: 766px;
+  height: 561px;
+  margin-top: -280px;
+  margin-left: -390px;
+  background: #e9e5dc url("../img/map.png");
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-map script {
+  border: 0;
+  outline: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 236px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  background-image: url("../img/modal-spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: 102% -63px;
+}
+
+.login-form input.icon-password {
+  background-image: url("../img/modal-spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: 102% -7px;
+}
+
+.login-form .restore {
   float: right;
+  color: #000000;
 }
 
-.price-features:nth-of-type(-n+3) {
-  min-height: 260px;
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
 }
 
-.price-features:last-of-type {
-  padding-top: 72px;
+.login-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.login-checkbox:hover {
+  color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
 }
